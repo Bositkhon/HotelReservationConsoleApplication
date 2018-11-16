@@ -6,18 +6,28 @@ public class Room {
     private static final int SIMPLE_ROOM_TYPE = 1;
 
     private String owner;
+    public double price;
+    public int type;
 
-    private String type;
+    public Room(){
+        this.price = 50 + (int)((Math.random()*100)%50);
+    }
 
-    int guestsInRoom;
+    public double getPrice() {
+        return price;
+    }
 
     public void setType(int type){
         if(type == LUXURY_ROOM_TYPE){
-            this.type = "Luxury";
+            this.type = LUXURY_ROOM_TYPE;
         }else if(type == SIMPLE_ROOM_TYPE){
-            this.type = "Simple";
+            this.type = SIMPLE_ROOM_TYPE;
         }
-}
+    }
+
+    public int getType() {
+        return type;
+    }
 
     public void setOwner(String owner){
         this.owner = owner;
@@ -27,7 +37,6 @@ public class Room {
         return owner;
     }
 
-    public String getType() {
-        return type;
-    }
+
+
 }
