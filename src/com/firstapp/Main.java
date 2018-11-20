@@ -83,7 +83,10 @@ public class Main {
                     }
                     break;
                 }
-
+                case 0:{
+                    command = 0;
+                    break;
+                }
                 default:{
                     System.out.println("You entered an invalid data");
                     System.out.println("Please try again!");
